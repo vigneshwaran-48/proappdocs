@@ -41,7 +41,7 @@ body, html{
     position: relative;
 }
 .side-nav-bar{
-    max-width: 200px;
+    max-width: 300px;
     width: 80%;
     height: 100%;
     transition: 0.5s;
@@ -93,6 +93,7 @@ body, html{
     transition: 0.5s;
     background-color: rgb(40,44,59);
     color: white;
+    width: 35%;
 }
 .code-section-button{
     width: 50px;

@@ -29,6 +29,7 @@
                 <a class="nav-a-tag" href="#get-user"><li class="common-api-li get-user-li">Get users</li></a>
                 <a class="nav-a-tag" href="#get-user-project"><li class="common-api-li get-user-by-pid-li">Get users by Project</li></a>
                 <a class="nav-a-tag" href="#get-current-user"><li class="common-api-li get-current-user-li">Current user</li></a>
+                <a class="nav-a-tag" href="#update-user"><li class="common-api-li get-current-user-li">Update user</li></a>
             </ul>
             <!-- Users api ends here -->
 
@@ -36,8 +37,8 @@
             <label for="project-doc-id" class="api-doc-heading">Project</label>
             <input type="checkbox" id="project-doc-id" class="common-checkbox">
             <ul class="project-apis-ul common-ul">
-                <a class="nav-a-tag"><li class="common-api-li add-project-li">Add Project</li></a>
-                <a class="nav-a-tag"><li class="common-api-li delete-project-li">Delete Project</li></a>
+                <a class="nav-a-tag" href="#create-project"><li class="common-api-li add-project-li">Add Project</li></a>
+                <a class="nav-a-tag" href="#delete-project"><li class="common-api-li delete-project-li">Delete Project</li></a>
                 <a class="nav-a-tag"><li class="common-api-li get-all-projects">Get All Projects</li></a>
             </ul>
             <!-- Project api ends here -->
@@ -64,7 +65,7 @@
                     <!-- Create user API description starts here -->
                     <div id="create-user" class="common-api-decription y-axis-flex">
                         <h1 class="common-api-heading">Create user</h1>
-                        <p class="api-desc-para">Use this API to create a user </p>
+                        <p class="api-desc-para">Use the Create user API to create a new user </p>
                         <div class="request-type-wrapper x-axis-flex">
                             <h2>Request type : </h2>
                             <p class="request-type-value">POST</p>
@@ -221,6 +222,47 @@
                     </div>
                     <!-- Get current user API ends here -->
 
+                    <!-- Update user API start here -->
+                    <div id="update-user" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Update user</h1>
+                        <p class="api-desc-para">Use this API to Update user</p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">POST</p>
+                        </div>
+                        <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>params</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>updatedUserData</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>JSON</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>Success</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Update user API start here -->
+
+
                     <!-- Add project API starts here -->
                     <div id="create-project" class="common-api-decription y-axis-flex">
                         <h1 class="common-api-heading">Add Project</h1>
@@ -260,6 +302,46 @@
                         </div>
                     </div>
                     <!-- Add project API ends here -->
+
+                    <!-- Delete project API start here -->
+                    <div id="delete-project" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Delete Project</h1>
+                        <p class="api-desc-para">Use this API to Delete a project </p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">POST</p>
+                        </div>
+                        <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Project Id</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>Project Id</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>Int</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>String</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Delete project API end here -->
                 </section>
             </section>
         </section>
@@ -276,8 +358,8 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request</h3>
-                            <p class="common-example-text">POST</p>
+                            <h3 class="common-example-text">Request: GET</h3>
+                            <!-- <p class="common-example-text">POST</p> -->
                             <p class="common-example-text">FormData : </p>
                             <code class="form-data">
                                 <p>{</p><br>
@@ -287,11 +369,11 @@
                                 <p>"password":"dummy@123"</p><br>
                                 <p>}</p>
                             </code>
-                            <p class="common-example-text api-link">http://ipaddress:8787/ProApp/user/create</p>
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/create</p>
                         </div>
                         <div class="response-body">
-                            <h3>Response</h3>
-                            <p class="common-example-text">success</p>
+                            <h3>Response: Success</h3>
+                            <!-- <p class="common-example-text">success</p> -->
                         </div>
                     </div>
                 </div>
@@ -304,16 +386,14 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request</h3>
-                            <p class="common-example-text">GET</p>
-                            <p class="common-example-text">Param : </p>
-                            <code class="form-data">
-                                <p>2</p><br>
-                            </code>
-                            <p class="common-example-text api-link">http://ipaddress:8787/ProApp/user/getusers?id=2</p>
+                            <h3 class="common-example-text">Request: GET</h3>
+                            <!-- <p class="common-example-text">GET</p> -->
+                            <p class="common-example-text">Param : 2 </p>
+                            
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/getusers?id=2</p>
                         </div>
                         <div class="response-body">
-                            <h3>Response</h3>
+                            <h3>Response:</h3>
                             <code class="response-json">
                                 <p>{</p><br>
                                 <p>"uid":1,</p><br>
@@ -332,16 +412,16 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request</h3>
-                            <p class="common-example-text">GET</p>
+                            <h3 class="common-example-text">Request: GET</h3>
+                            <!-- <p class="common-example-text">GET</p> -->
                             <p class="common-example-text">Param : </p>
                             <code class="form-data">
                                 <p>17</p><br>
                             </code>
-                            <p class="common-example-text api-link">http://ipaddress:8787/ProApp/user/getusers/project?id=2</p>
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/getusers/project?id=2</p>
                         </div>
                         <div class="response-body">
-                            <h3>Response</h3>
+                            <h3>Response:</h3>
                             <code class="response-json">
                                 <p>[</p>
                                 <p>&nbsp;{</p>
@@ -370,13 +450,13 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request</h3>
-                            <p class="common-example-text">GET</p>
+                            <h3 class="common-example-text">Request: GET </h3>
+                            <!-- <p class="common-example-text">GET</p> -->
             
-                            <p class="common-example-text api-link">http://ipaddress:8787/ProApp/user/currentuser</p>
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/currentuser</p>
                         </div>
                         <div class="response-body">
-                            <h3>Response</h3>
+                            <h3>Response:</h3>
                             <code class="response-json">
                                 <p>{</p>
                                 <p>&nbsp;"currentUserName":"Bharath",</p>
@@ -387,6 +467,36 @@
                     </div>
                 </div>
                 <!-- Get current user API ends here -->
+
+                 <!-- Update user API starts here -->
+                 <div id="create-project" class="common-api-example">
+                    <div>
+                        <h2>Update user</h2>
+                    </div>
+                    <div class="example-body">
+                        <div class="request-body">
+                            <h3 class="common-example-text">Request: POST</h3>
+                            <!-- <p class="common-example-text">POST</p> -->
+                            <p class="common-example-text">updatedUserData</p>
+                            <code class="form-data">
+                                <p>{</p><br>
+                                <p>"newFirstName":"Vigneshwaran"</p><br>
+                                <p>"newLastName":"P"</p><br>
+                                <p>"newEmailId":"vickyemail@proapp.com"</p><br>
+                                <p>"uid":"2"</p><br>
+                                <p>}</p>
+                            </code>
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/update</p>
+                        </div>
+                        <div class="response-body">
+                            <h3>Response: Success</h3>
+                            <!-- <h3>Response</h3>
+                            <p class="common-example-text">success</p> -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Update user API ends here -->
             </section>
             <!-- User API ends here -->
 
@@ -399,8 +509,8 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request</h3>
-                            <p class="common-example-text">POST</p>
+                            <h3 class="common-example-text">Request: POST</h3>
+                            <!-- <p class="common-example-text">POST</p> -->
                             <p class="common-example-text">FormData : </p>
                             <code class="form-data">
                                 <p>{</p><br>
@@ -410,15 +520,42 @@
                                 <p>"password":"dummy@123"</p><br>
                                 <p>}</p>
                             </code>
-                            <p class="common-example-text api-link">http://ipaddress:8787/ProApp/project/add</p>
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/project/add</p>
                         </div>
                         <div class="response-body">
-                            <h3>Response</h3>
-                            <p class="common-example-text">success</p>
+                            <h3>Response: Success</h3>
+                            <!-- <h3>Response</h3>
+                            <p class="common-example-text">success</p> -->
                         </div>
                     </div>
                 </div>
                 <!-- Add project API ends here -->
+
+                <!-- Delete project start here -->
+                <div id="create-project" class="common-api-example">
+                    <div>
+                        <h2>Delete project</h2>
+                    </div>
+                    <div class="example-body">
+                        <div class="request-body">
+                            <h3 class="common-example-text">Request: POST</h3>
+                            <!-- <p class="common-example-text">POST</p> -->
+                            
+                            <p class="common-example-text">Param : 2</p>
+                            
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/project/projectId?id=2</p>
+                            
+                        </div>
+                        <div class="response-body">
+                            <h3>Response: Success</h3>
+                            <!-- <h3>Response</h3>
+                            <p class="common-example-text">success</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- Delete project end here -->
+                
+
             </section>
             <!-- Project API ends here -->
         </section>
