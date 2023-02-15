@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/maindocs.css" rel="stylesheet" type="text/css">
     <title>API Docs</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header class="top-header x-axis-flex">
         <div class="hamburger-menu-wrapper">
@@ -25,11 +30,21 @@
             <label for="users-doc-id" class="api-doc-heading">Users</label>
             <input type="checkbox" id="users-doc-id" class="common-checkbox">
             <ul class="users-apis-ul common-ul">
-                <a class="nav-a-tag" href="#create-user"><li class="common-api-li create-user-li">Create user</li></a>
-                <a class="nav-a-tag" href="#get-user"><li class="common-api-li get-user-li">Get users</li></a>
-                <a class="nav-a-tag" href="#get-user-project"><li class="common-api-li get-user-by-pid-li">Get users by Project</li></a>
-                <a class="nav-a-tag" href="#get-current-user"><li class="common-api-li get-current-user-li">Current user</li></a>
-                <a class="nav-a-tag" href="#update-user"><li class="common-api-li get-current-user-li">Update user</li></a>
+                <a class="nav-a-tag" href="#create-user">
+                    <li class="common-api-li create-user-li">Create user</li>
+                </a>
+                <a class="nav-a-tag" href="#get-user">
+                    <li class="common-api-li get-user-li">Get users</li>
+                </a>
+                <a class="nav-a-tag" href="#get-user-project">
+                    <li class="common-api-li get-user-by-pid-li">Get users by Project</li>
+                </a>
+                <a class="nav-a-tag" href="#get-current-user">
+                    <li class="common-api-li get-current-user-li">Current user</li>
+                </a>
+                <a class="nav-a-tag" href="#update-user">
+                    <li class="common-api-li get-current-user-li">Update user</li>
+                </a>
             </ul>
             <!-- Users api ends here -->
 
@@ -37,9 +52,15 @@
             <label for="project-doc-id" class="api-doc-heading">Project</label>
             <input type="checkbox" id="project-doc-id" class="common-checkbox">
             <ul class="project-apis-ul common-ul">
-                <a class="nav-a-tag" href="#create-project"><li class="common-api-li add-project-li">Add Project</li></a>
-                <a class="nav-a-tag" href="#delete-project"><li class="common-api-li delete-project-li">Delete Project</li></a>
-                <a class="nav-a-tag"><li class="common-api-li get-all-projects">Get All Projects</li></a>
+                <a class="nav-a-tag" href="#create-project">
+                    <li class="common-api-li add-project-li">Add Project</li>
+                </a>
+                <a class="nav-a-tag" href="#delete-project">
+                    <li class="common-api-li delete-project-li">Delete Project</li>
+                </a>
+                <a class="nav-a-tag">
+                    <li class="common-api-li get-all-projects">Get All Projects</li>
+                </a>
             </ul>
             <!-- Project api ends here -->
 
@@ -47,9 +68,15 @@
             <label for="task-doc-id" class="api-doc-heading">Task</label>
             <input type="checkbox" id="task-doc-id" class="common-checkbox">
             <ul class="task-apis-ul common-ul">
-                <a class="nav-a-tag"><li class="common-api-li add-task-li">Add Task</li></a>
-                <a class="nav-a-tag"><li class="common-api-li delete-task-li">Delete Task</li></a>
-                <a class="nav-a-tag"><li class="common-api-li get-all-tasks">Get All Tasks</li></a>
+                <a class="nav-a-tag">
+                    <li class="common-api-li add-task-li">Add Task</li>
+                </a>
+                <a class="nav-a-tag">
+                    <li class="common-api-li delete-task-li">Delete Task</li>
+                </a>
+                <a class="nav-a-tag">
+                    <li class="common-api-li get-all-tasks">Get All Tasks</li>
+                </a>
             </ul>
             <!-- Task api ends here -->
         </section>
@@ -101,7 +128,7 @@
                         </div>
                     </div>
                     <!-- Create user API description ends here -->
-                    
+
                     <!-- Get users API starts here -->
                     <div id="get-user" class="common-api-decription y-axis-flex">
                         <h1 class="common-api-heading">Get users</h1>
@@ -118,7 +145,8 @@
                                         <h4>id</h4>
                                     </div>
                                     <div class="query-content">
-                                        <p>all --> To get all users data, other number only for that particular user.</p>
+                                        <p>all --> To get all users data, other number only for that particular user.
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="query-row x-axis-flex">
@@ -182,7 +210,7 @@
                     </div>
                     <!-- Get users by Project API ends here -->
 
-                   
+
 
                     <!-- Update user API start here -->
                     <div id="update-user" class="common-api-decription y-axis-flex">
@@ -222,7 +250,7 @@
                             </div>
                         </div>
                     </div>
-                     <!-- Update user API start here -->
+                    <!-- Update user API start here -->
 
 
                     <!-- Add project API starts here -->
@@ -241,7 +269,8 @@
                                         <h4>data</h4>
                                     </div>
                                     <div class="query-content">
-                                        <p>projectName - String, fromDate - Date, toDate - Date, projectDesc - String, users - Array of ids, createdBy - current user id</p>
+                                        <p>projectName - String, fromDate - Date, toDate - Date, projectDesc - String,
+                                            users - Array of ids, createdBy - current user id</p>
                                     </div>
                                 </div>
                                 <div class="query-row x-axis-flex">
@@ -349,6 +378,50 @@
                         </div>
                     </div>
                     <!-- Getall project API end here -->
+                    <!-- Deleting the user on the project -->
+                    <div id="delete-project" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Delete the user on the Project </h1>
+                        <p class="api-desc-para">This API will Delete the user on the Project </p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">POST</p>
+                        </div>
+                      
+                        <!-- <h2 class="note-head">Note:</h2>
+                        <p class="request-type-value">GET</p> -->
+                        <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>User Id</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>None</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>JSON</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>String</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Deleting the user on the project end-->
                 </section>
             </section>
         </section>
@@ -387,7 +460,7 @@
                 <!-- Create user API ends here -->
 
                 <!-- Get users API starts here -->
-                <div  id="get-user" class="common-api-example">
+                <div id="get-user" class="common-api-example">
                     <div>
                         <h2>Get users example</h2>
                     </div>
@@ -396,8 +469,9 @@
                             <h3 class="common-example-text">Request: GET</h3>
                             <!-- <p class="common-example-text">GET</p> -->
                             <p class="common-example-text">Param : 2 </p>
-                            
-                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/getusers?id=2</p>
+
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/getusers?id=2
+                            </p>
                         </div>
                         <div class="response-body">
                             <h3>Response:</h3>
@@ -413,7 +487,7 @@
                 <!-- Get users API ends here  -->
 
                 <!-- Get users by project API starts here -->
-                <div  id="get-user" class="common-api-example">
+                <div id="get-user" class="common-api-example">
                     <div>
                         <h2>Get users by project example</h2>
                     </div>
@@ -425,7 +499,8 @@
                             <code class="form-data">
                                 <p>17</p><br>
                             </code>
-                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/getusers/project?id=2</p>
+                            <p class="common-example-text api-link">URL:
+                                http://ipaddress:8787/ProApp/user/getusers/project?id=2</p>
                         </div>
                         <div class="response-body">
                             <h3>Response:</h3>
@@ -450,8 +525,8 @@
                 </div>
                 <!-- Get users by project API ends here -->
 
-                 <!-- Update user API starts here -->
-                 <div id="create-project" class="common-api-example">
+                <!-- Update user API starts here -->
+                <div id="create-project" class="common-api-example">
                     <div>
                         <h2>Update user</h2>
                     </div>
@@ -477,7 +552,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Update user API ends here -->
             </section>
             <!-- User API ends here -->
@@ -522,11 +597,12 @@
                         <div class="request-body">
                             <h3 class="common-example-text">Request: POST</h3>
                             <!-- <p class="common-example-text">POST</p> -->
-                            
+
                             <p class="common-example-text">Param : 2</p>
-                            
-                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/project/projectId?id=2</p>
-                            
+
+                            <p class="common-example-text api-link">URL:
+                                http://ipaddress:8787/ProApp/project/projectId?id=2</p>
+
                         </div>
                         <div class="response-body">
                             <h3>Response: Success</h3>
@@ -543,12 +619,12 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                    
-                            
+
+
                             <p class="common-example-text">Param : None</p>
-                            
+
                             <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/project/getall</p>
-                            
+
                         </div>
                         <div class="response-body">
                             <h3>Response:</h3>
@@ -558,17 +634,46 @@
                     </div>
                 </div>
                 <!-- GetAll project end here -->
-                
-                
+                <!-- Delete User  start here -->
+                <div id="create-project" class="common-api-example">
+                    <div>
+                        <h2>Delete Projects</h2>
+                    </div>
+                    <div class="example-body">
+                        <div class="request-body">
+
+
+                            <p class="common-example-text">userData :</p>
+                            <code class="form-data">
+                                <p>{</p><br>
+                                <p>"userId":2</p><br>
+                                <p>"projectId":"28"</p><br>
+                                
+                                <p>}</p>
+                            </code>
+
+                            <p class="common-example-text api-link">URL: http://localhost:8050/ProApp/project/user/delete</p>
+
+                        </div>
+                        <div class="response-body">
+                            <h3>Response:  Deleted Successfully</h3>
+                            <!-- <h3>Response</h3>-->
+                        </div>
+                    </div>
+                </div>
+                <!-- Delete User end here -->
+
+
 
             </section>
             <!-- Project API ends here -->
         </section>
         <!-- API example ends here -->
-        <span class="code-section-button">  </span>
+        <span class="code-section-button"> </span>
     </section>
 </body>
 
 <script src="/js/docsview.js"></script>
 <script src="/js/docscontroller.js"></script>
+
 </html>
