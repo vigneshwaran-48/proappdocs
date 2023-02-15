@@ -182,45 +182,7 @@
                     </div>
                     <!-- Get users by Project API ends here -->
 
-                    <!-- Get current user API starts here -->
-                    <div id="get-current-user" class="common-api-decription y-axis-flex">
-                        <h1 class="common-api-heading">Get current user</h1>
-                        <p class="api-desc-para">Use this API to get the current user, <b>NOTE: This will work only if you used login API or create user API before sending request to it and it needs the JSESSION id.</b></p>
-                        <div class="request-type-wrapper x-axis-flex">
-                            <h2>Request type : </h2>
-                            <p class="request-type-value">GET</p>
-                        </div>
-                        <div class="query-params">
-                            <h2 class="common-query-params-heading">Query Params</h2>
-                            <div class="query-table y-axis-flex">
-                                <div class="query-row x-axis-flex">
-                                    <div class="query-head">
-                                        <h4>params</h4>
-                                    </div>
-                                    <div class="query-content">
-                                        <p>Not needed</p>
-                                    </div>
-                                </div>
-                                <div class="query-row x-axis-flex">
-                                    <div class="query-head">
-                                        <h4>format</h4>
-                                    </div>
-                                    <div class="query-content">
-                                        <p>None</p>
-                                    </div>
-                                </div>
-                                <div class="query-row x-axis-flex">
-                                    <div class="query-head">
-                                        <h4>Return</h4>
-                                    </div>
-                                    <div class="query-content">
-                                        <p>JSON</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Get current user API ends here -->
+                   
 
                     <!-- Update user API start here -->
                     <div id="update-user" class="common-api-decription y-axis-flex">
@@ -342,6 +304,51 @@
                         </div>
                     </div>
                     <!-- Delete project API end here -->
+                    <!-- Getall project API start here -->
+                    <div id="delete-project" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Getall Project </h1>
+                        <p class="api-desc-para">This API will retrive the Projects which are assigned to the user </p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">GET</p>
+                        </div>
+                        <div class="note-type-wrapper x-axis-flex">
+                            <h2>NOTE:</h2>
+                            <p class="request-type-value">This API works only if you have logged in </p>
+                        </div>
+                        <!-- <h2 class="note-head">Note:</h2>
+                        <p class="request-type-value">GET</p> -->
+                        <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>User Id</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>None</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>Int</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>JSON</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Getall project API end here -->
                 </section>
             </section>
         </section>
@@ -443,31 +450,6 @@
                 </div>
                 <!-- Get users by project API ends here -->
 
-                <!-- Get current user API starts here -->
-                <div  id="get-current-user" class="common-api-example">
-                    <div>
-                        <h2>Get current user example</h2>
-                    </div>
-                    <div class="example-body">
-                        <div class="request-body">
-                            <h3 class="common-example-text">Request: GET </h3>
-                            <!-- <p class="common-example-text">GET</p> -->
-            
-                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/currentuser</p>
-                        </div>
-                        <div class="response-body">
-                            <h3>Response:</h3>
-                            <code class="response-json">
-                                <p>{</p>
-                                <p>&nbsp;"currentUserName":"Bharath",</p>
-                                <p>&nbsp;"currentUserId":"1"</p>
-                                <p>}</p>
-                            </code>
-                        </div>
-                    </div>
-                </div>
-                <!-- Get current user API ends here -->
-
                  <!-- Update user API starts here -->
                  <div id="create-project" class="common-api-example">
                     <div>
@@ -554,13 +536,36 @@
                     </div>
                 </div>
                 <!-- Delete project end here -->
+                <!-- GetAll project start here -->
+                <div id="create-project" class="common-api-example">
+                    <div>
+                        <h2>Get All Projects</h2>
+                    </div>
+                    <div class="example-body">
+                        <div class="request-body">
+                    
+                            
+                            <p class="common-example-text">Param : None</p>
+                            
+                            <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/project/getall</p>
+                            
+                        </div>
+                        <div class="response-body">
+                            <h3>Response:</h3>
+                            <!-- <h3>Response</h3>
+                            <p class="common-example-text">success</p> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- GetAll project end here -->
+                
                 
 
             </section>
             <!-- Project API ends here -->
         </section>
         <!-- API example ends here -->
-        <span class="code-section-button"> < </span>
+        <span class="code-section-button">  </span>
     </section>
 </body>
 
