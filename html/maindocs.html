@@ -58,8 +58,8 @@
                 <a class="nav-a-tag" href="#delete-project">
                     <li class="common-api-li delete-project-li">Delete Project</li>
                 </a>
-                <a class="nav-a-tag">
-                    <li class="common-api-li get-all-projects">Get All Projects</li>
+                <a class="nav-a-tag" href="#delete-user-from-project">
+                    <li class="common-api-li get-all-projects">Delete user on the project</li>
                 </a>
             </ul>
             <!-- Project api ends here -->
@@ -68,15 +68,15 @@
             <label for="task-doc-id" class="api-doc-heading">Task</label>
             <input type="checkbox" id="task-doc-id" class="common-checkbox">
             <ul class="task-apis-ul common-ul">
-                <a class="nav-a-tag">
+                <a class="nav-a-tag" href="#add-task">
                     <li class="common-api-li add-task-li">Add Task</li>
                 </a>
-                <a class="nav-a-tag">
+                <a class="nav-a-tag" href="#delete-task">
                     <li class="common-api-li delete-task-li">Delete Task</li>
                 </a>
-                <a class="nav-a-tag">
+                <!-- <a class="nav-a-tag" href="#get-all-task">
                     <li class="common-api-li get-all-tasks">Get All Tasks</li>
-                </a>
+                </a> -->
             </ul>
             <!-- Task api ends here -->
         </section>
@@ -244,7 +244,7 @@
                                         <h4>Return</h4>
                                     </div>
                                     <div class="query-content">
-                                        <p>Success</p>
+                                        <p>String</p>
                                     </div>
                                 </div>
                             </div>
@@ -269,8 +269,8 @@
                                         <h4>data</h4>
                                     </div>
                                     <div class="query-content">
-                                        <p>projectName - String, fromDate - Date, toDate - Date, projectDesc - String,
-                                            users - Array of ids, createdBy - current user id</p>
+                                        <p>projectName, fromDate, toDate, projectDesc,
+                                            users, createdBy</p>
                                     </div>
                                 </div>
                                 <div class="query-row x-axis-flex">
@@ -334,7 +334,7 @@
                     </div>
                     <!-- Delete project API end here -->
                     <!-- Getall project API start here -->
-                    <div id="delete-project" class="common-api-decription y-axis-flex">
+                    <!-- <div id="delete-project" class="common-api-decription y-axis-flex">
                         <h1 class="common-api-heading">Getall Project </h1>
                         <p class="api-desc-para">This API will retrive the Projects which are assigned to the user </p>
                         <div class="request-type-wrapper x-axis-flex">
@@ -345,9 +345,9 @@
                             <h2>NOTE:</h2>
                             <p class="request-type-value">This API works only if you have logged in </p>
                         </div>
-                        <!-- <h2 class="note-head">Note:</h2>
+                        <h2 class="note-head">Note:</h2>
                         <p class="request-type-value">GET</p> -->
-                        <div class="query-params">
+                        <!-- <div class="query-params">
                             <h2 class="common-query-params-heading">Query Params</h2>
                             <div class="query-table y-axis-flex">
                                 <div class="query-row x-axis-flex">
@@ -376,12 +376,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --> 
                     <!-- Getall project API end here -->
                     <!-- Deleting the user on the project -->
-                    <div id="delete-project" class="common-api-decription y-axis-flex">
+                    <div id="delete-user-from-project" class="common-api-decription y-axis-flex">
                         <h1 class="common-api-heading">Delete the user on the Project </h1>
-                        <p class="api-desc-para">This API will Delete the user on the Project </p>
+                        <p class="api-desc-para">Use this API to Delete the user on the Project </p>
                         <div class="request-type-wrapper x-axis-flex">
                             <h2>Request type : </h2>
                             <p class="request-type-value">POST</p>
@@ -422,6 +422,147 @@
 
 
                     <!-- Deleting the user on the project end-->
+
+
+
+                     <!-- Add task API start here -->
+                     <div id="add-task" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Add task</h1>
+                        <p class="api-desc-para">Use this API to Add the user on the Project </p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">POST</p>
+                        </div>
+                      
+                        <!-- <h2 class="note-head">Note:</h2>
+                        <p class="request-type-value">GET</p> -->
+                        <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>taskData</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>taskName, fromData, toDate, description, users</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>JSONObject</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>JSON</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Add task API end here-->
+
+
+
+                    <!-- Delete task API start here -->
+                    <div id="delete-task" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Delete task</h1>
+                        <p class="api-desc-para">Use this API to Delete the task on the Project </p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">POST</p>
+                        </div>
+                      
+                        <!-- <h2 class="note-head">Note:</h2>
+                        <p class="request-type-value">GET</p> -->
+                        <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>taskId</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>taskId</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>Integer</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>String</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Delete task API end here-->
+
+
+
+                     <!-- Get all task API start here -->
+                     <!-- <div id="get-all-task" class="common-api-decription y-axis-flex">
+                        <h1 class="common-api-heading">Get all Task</h1>
+                        <p class="api-desc-para">Use this API to Get all the task on the Project </p>
+                        <div class="request-type-wrapper x-axis-flex">
+                            <h2>Request type : </h2>
+                            <p class="request-type-value">GET</p>
+                        </div> -->
+                      
+                        <!-- <h2 class="note-head">Note:</h2>
+                        <p class="request-type-value">GET</p> -->
+                        <!-- <div class="query-params">
+                            <h2 class="common-query-params-heading">Query Params</h2>
+                            <div class="query-table y-axis-flex">
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>taskId</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>taskId</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>format</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>Integer</p>
+                                    </div>
+                                </div>
+                                <div class="query-row x-axis-flex">
+                                    <div class="query-head">
+                                        <h4>Return</h4>
+                                    </div>
+                                    <div class="query-content">
+                                        <p>String</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+
+                    <!-- Get all task API end here-->
                 </section>
             </section>
         </section>
@@ -438,14 +579,14 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request: GET</h3>
+                            <!-- <h3 class="common-example-text">Request: GET</h3> -->
                             <!-- <p class="common-example-text">POST</p> -->
-                            <p class="common-example-text">FormData : </p>
+                            <p class="common-example-text">userData:</p>
                             <code class="form-data">
                                 <p>{</p><br>
-                                <p>"firstName":"Vigneshwaran"</p><br>
-                                <p>"lastName":"P"</p><br>
-                                <p>"emailId":"dummy.email@proapp.com"</p><br>
+                                <p>"firstName":"Vigneshwaran",</p><br>
+                                <p>"lastName":"P",</p><br>
+                                <p>"emailId":"dummy.email@proapp.com",</p><br>
                                 <p>"password":"dummy@123"</p><br>
                                 <p>}</p>
                             </code>
@@ -466,9 +607,9 @@
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request: GET</h3>
+                            <!-- <h3 class="common-example-text">Request: GET</h3> -->
                             <!-- <p class="common-example-text">GET</p> -->
-                            <p class="common-example-text">Param : 2 </p>
+                            <p class="common-example-text">Id : 2 </p>
 
                             <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/user/getusers?id=2
                             </p>
@@ -487,20 +628,20 @@
                 <!-- Get users API ends here  -->
 
                 <!-- Get users by project API starts here -->
-                <div id="get-user" class="common-api-example">
+                <div id="get-user-API" class="common-api-example">
                     <div>
                         <h2>Get users by project example</h2>
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request: GET</h3>
+                            <!-- <h3 class="common-example-text">Request: GET</h3> -->
                             <!-- <p class="common-example-text">GET</p> -->
-                            <p class="common-example-text">Param : </p>
+                            <p class="common-example-text">Id : 17 </p>
                             <code class="form-data">
-                                <p>17</p><br>
+                                <!-- <p>17</p><br> -->
                             </code>
                             <p class="common-example-text api-link">URL:
-                                http://ipaddress:8787/ProApp/user/getusers/project?id=2</p>
+                                http://ipaddress:8787/ProApp/user/getusers/project?id=27</p>
                         </div>
                         <div class="response-body">
                             <h3>Response:</h3>
@@ -526,20 +667,20 @@
                 <!-- Get users by project API ends here -->
 
                 <!-- Update user API starts here -->
-                <div id="create-project" class="common-api-example">
+                <div id="update-user-API" class="common-api-example">
                     <div>
                         <h2>Update user</h2>
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request: POST</h3>
+                            <!-- <h3 class="common-example-text">Request: POST</h3> -->
                             <!-- <p class="common-example-text">POST</p> -->
-                            <p class="common-example-text">updatedUserData</p>
+                            <p class="common-example-text">updatedUserData:</p>
                             <code class="form-data">
                                 <p>{</p><br>
-                                <p>"newFirstName":"Vigneshwaran"</p><br>
-                                <p>"newLastName":"P"</p><br>
-                                <p>"newEmailId":"vickyemail@proapp.com"</p><br>
+                                <p>"newFirstName":"Vigneshwaran",</p><br>
+                                <p>"newLastName":"P",</p><br>
+                                <p>"newEmailId":"vickyemail@proapp.com",</p><br>
                                 <p>"uid":"2"</p><br>
                                 <p>}</p>
                             </code>
@@ -560,21 +701,22 @@
             <!-- Project API starts here -->
             <section class="project-api-examples">
                 <!-- Add project API starts here -->
-                <div id="create-project" class="common-api-example">
+                <div id="add-project-API" class="common-api-example">
                     <div>
                         <h2>Add project</h2>
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request: POST</h3>
+                            <!-- <h3 class="common-example-text">Request: POST</h3> -->
                             <!-- <p class="common-example-text">POST</p> -->
-                            <p class="common-example-text">FormData : </p>
+                            <p class="common-example-text">data: </p>
                             <code class="form-data">
                                 <p>{</p><br>
-                                <p>"projectName":"Vigneshwaran"</p><br>
-                                <p>"lastName":"P"</p><br>
-                                <p>"emailId":"dummy.email@proapp.com"</p><br>
-                                <p>"password":"dummy@123"</p><br>
+                                <p>"projectName":"Vigneshwaran",</p><br>
+                                <p>"fromDate":"2023-02-12",</p><br>
+                                <p>"toDate":"2023-02-17",</p><br>
+                                <p>"users":"["2","4"]"</p><br>
+                                <p>"createdBy":5</p><br>
                                 <p>}</p>
                             </code>
                             <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp/project/add</p>
@@ -589,19 +731,19 @@
                 <!-- Add project API ends here -->
 
                 <!-- Delete project start here -->
-                <div id="create-project" class="common-api-example">
+                <div id="delete-project-API" class="common-api-example">
                     <div>
                         <h2>Delete project</h2>
                     </div>
                     <div class="example-body">
                         <div class="request-body">
-                            <h3 class="common-example-text">Request: POST</h3>
+                            <!-- <h3 class="common-example-text">Request: POST</h3> -->
                             <!-- <p class="common-example-text">POST</p> -->
 
-                            <p class="common-example-text">Param : 2</p>
+                            <p class="common-example-text">projectId : 2</p>
 
                             <p class="common-example-text api-link">URL:
-                                http://ipaddress:8787/ProApp/project/projectId?id=2</p>
+                                http://ipaddress:8787/ProApp/project/delete/?projectId=2</p>
 
                         </div>
                         <div class="response-body">
@@ -613,7 +755,7 @@
                 </div>
                 <!-- Delete project end here -->
                 <!-- GetAll project start here -->
-                <div id="create-project" class="common-api-example">
+                <!-- <div id="create-project" class="common-api-example">
                     <div>
                         <h2>Get All Projects</h2>
                     </div>
@@ -628,16 +770,16 @@
                         </div>
                         <div class="response-body">
                             <h3>Response:</h3>
-                            <!-- <h3>Response</h3>
+                             <h3>Response</h3>
                             <p class="common-example-text">success</p> -->
-                        </div>
+                        <!-- </div>
                     </div>
-                </div>
+                </div>  -->
                 <!-- GetAll project end here -->
                 <!-- Delete User  start here -->
-                <div id="create-project" class="common-api-example">
+                <div id="delete-user-project" class="common-api-example">
                     <div>
-                        <h2>Delete Projects</h2>
+                        <h2>Delete user on the Projects</h2>
                     </div>
                     <div class="example-body">
                         <div class="request-body">
@@ -646,7 +788,7 @@
                             <p class="common-example-text">userData :</p>
                             <code class="form-data">
                                 <p>{</p><br>
-                                <p>"userId":2</p><br>
+                                <p>"userId":2,</p><br>
                                 <p>"projectId":"28"</p><br>
                                 
                                 <p>}</p>
@@ -667,6 +809,119 @@
 
             </section>
             <!-- Project API ends here -->
+
+            <!-- Task API start here -->
+
+             <!-- Add task API starts here -->
+             <div id="add-task-API" class="common-api-example">
+                <div>
+                    <h2>Add task</h2>
+                </div>
+                <div class="example-body">
+                    <div class="request-body">
+                        <!-- <h3 class="common-example-text">Request: POST</h3> -->
+                        <!-- <p class="common-example-text">POST</p> -->
+                        <p class="common-example-text">taskData: </p>
+                        <code class="form-data">
+                            <p>{</p><br>
+                            <p>"taskName":"Testing",</p><br>
+                            <p>"fromDate":"2023-02-12",</p><br>
+                            <p>"toDate":"2023-02-17",</p><br>
+                            <p>"projectId":27</p><br>
+                            <p>"users":"["2","4"]"</p><br>
+                            <p>"createdBy":5</p><br>
+                            <p>}</p>
+                        </code>
+                        <p class="common-example-text api-link">URL: http://ipaddress:8787/ProApp//add</p>
+                    </div>
+                    <div class="response-body">
+                        <h3>Response:</h3>
+                        <code class="response-json">
+            
+                            <p>{</p><br>
+                                <p>"taskName":"Testing",</p><br>
+                                <p>"fromDate":"2023-02-12",</p><br>
+                                <p>"toDate":"2023-02-17",</p><br>
+                                <p>"projectId":27</p><br>
+                                <p>"description":"null"</p><br>
+                                <p>"createdBy":5</p><br>
+                                <p>"users":</p>
+                                <p>[</p>
+                                <p>&nbsp;{</p>
+                                <p>&nbsp;&nbsp;"userName":"Bharath",</p>
+                                <p>&nbsp;&nbsp;"userId":"1"</p>
+                                <p>&nbsp;},</p>
+                                <p>&nbsp;{</p>
+                                <p>&nbsp;&nbsp;"userName":"Vignesh",</p>
+                                <p>&nbsp;&nbsp;"userId":"3"</p>
+                                <p>&nbsp;},</p>
+                                <p>&nbsp;{</p>
+                                <p>&nbsp;&nbsp;"userName":"Harish",</p>
+                                <p>&nbsp;&nbsp;"userId":"4"</p>
+                                <p>&nbsp;}</p>
+                                <p>]</p><br>
+                                <p>}</p>
+                    
+                        </code>
+                        <!-- <h3>Response</h3>
+                        <p class="common-example-text">success</p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Add task API ends here -->
+
+
+            <!-- Delete task API start here -->
+            <div id="delete-task-API" class="common-api-example">
+                <div>
+                    <h2>Delete Task</h2>
+                </div>
+                <div class="example-body">
+                    <div class="request-body">
+                        <!-- <h3 class="common-example-text">Request: POST</h3> -->
+                        <!-- <p class="common-example-text">POST</p> -->
+
+                        <p class="common-example-text">taskId : 2</p>
+
+                        <p class="common-example-text api-link">URL:
+                            http://ipaddress:8787/ProApp/task/delete/?taskId=2</p>
+
+                    </div>
+                    <div class="response-body">
+                        <h3>Response: Success</h3>
+                        <!-- <h3>Response</h3>
+                        <p class="common-example-text">success</p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Delete task API end here -->
+
+
+
+            <!-- Get all task API start here -->
+            <!-- <div id="get-all-task-API" class="common-api-example">
+                <div>
+                    <h2>Get all Tasks</h2>
+                </div>
+                <div class="example-body">
+                    <div class="request-body">
+                        <h3 class="common-example-text">Request: POST</h3> -->
+                        <!-- <p class="common-example-text">POST</p> -->
+
+                        <!-- <p class="common-example-text">taskId : 2</p>
+
+                        <p class="common-example-text api-link">URL:
+                            http://ipaddress:8787/ProApp/task/getall</p>
+
+                    </div>
+                    <div class="response-body"> -->
+                        <!-- <h3>Response: Success</h3> -->
+                        <!-- <h3>Response</h3>
+                        <p class="common-example-text">success</p> -->
+                    <!-- </div>
+                </div>
+            </div> -->
+            <!-- Delete task API end here
         </section>
         <!-- API example ends here -->
         <span class="code-section-button"> </span>
